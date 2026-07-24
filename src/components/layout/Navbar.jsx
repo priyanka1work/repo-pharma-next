@@ -10,9 +10,9 @@ function Navbar() {
     <li>
         <Link href="/">Homepage</Link>
       </li>
-      <li>
+      {/* <li>
         <Link href="/dashboard">Dashboard</Link>
-      </li>
+      </li> */}
       <li>
         <Link href="/about">About</Link>
       </li>
