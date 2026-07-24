@@ -4,6 +4,7 @@ import Input from "../ui/Input";
 import Button from "../ui/Button";
 import { useRouter } from "next/navigation";
 import login from "@/services/authService";
+import { loginAuth } from "@/lib/auth";
 
 function LoginForm() {
   const [email, setEmail] = useState("");
@@ -29,7 +30,8 @@ function LoginForm() {
       return;
     }
     if (result.success) {
-      localStorage.setItem("user",JSON.stringify(result.user))
+      // localStorage.setItem("user",JSON.stringify(result.user))
+      loginAuth()
       router.push("/dashboard");
       setLoading(false);
     }
