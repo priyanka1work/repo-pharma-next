@@ -5,7 +5,9 @@ export function loginAuth() {
   document.cookie = `sessionId:${sessionID}; path=/`;
 }
 
-function isAuthenticated() {}
+export function isAuthenticated() {
+  return getSession()!==null
+}
 
 export function logout() {
   document.cookie =
