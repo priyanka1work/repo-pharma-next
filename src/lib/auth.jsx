@@ -2,7 +2,7 @@ export function loginAuth() {
   //session id
   // setcookie
   const sessionID = "FakeId123456";
-  document.cookie = `sessionId:${sessionID}; path=/`;
+  document.cookie = `sessionId=${sessionID}; path=/`;
 }
 
 export function isAuthenticated() {
