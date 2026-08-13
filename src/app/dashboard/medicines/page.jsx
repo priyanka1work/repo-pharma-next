@@ -1,14 +1,11 @@
 import MedicineSearch from "@/components/medicines/MedicineSearch";
-import MedicineTable from "@/components/medicines/MedicineTable";
+// import MedicineTable from "@/components/medicines/MedicineTable";
 import { getMedicines } from "@/lib/api/medicines";
-import React from "react";
 
-async function page() {
+async function Page() {
   const medicines = await getMedicines();
   // console.log(medicines);
-  return (
-    <MedicineSearch medicines={medicines}/>
-  );
+  return <MedicineSearch initialMedicines={medicines} />;
 }
 
-export default page;
+export default Page;
