@@ -1,14 +1,14 @@
-import { getMedicines } from '@/lib/api/medicines'
-import React from 'react'
+import MedicineSearch from "@/components/medicines/MedicineSearch";
+import MedicineTable from "@/components/medicines/MedicineTable";
+import { getMedicines } from "@/lib/api/medicines";
+import React from "react";
 
 async function page() {
-    const medicines= await getMedicines()
-    console.log(medicines)
+  const medicines = await getMedicines();
+  // console.log(medicines);
   return (
-    <div>
-      {/* {medicines} */}
-    </div>
-  )
+    <MedicineSearch medicines={medicines}/>
+  );
 }
 
-export default page
+export default page;

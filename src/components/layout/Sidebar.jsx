@@ -11,10 +11,13 @@ function Sidebar() {
       label: "Patients",
       href: "/dashboard/patients",
     },
+    
     {
-      label: "Settings",
-      href: "/dashboard/settings",
+      label: "Medicines",
+      href: "/dashboard/medicines",
     },
+    
+   
   ];
   return (
     <nav className="flex gap-3">
