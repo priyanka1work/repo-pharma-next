@@ -1,3 +1,21 @@
+const columns = [
+  {
+    key: "brandName",
+    label: "Brand Name",
+  },
+  {
+    key: "genericName",
+    label: "Generic Name",
+  },
+  {
+    key: "manufacturer",
+    label: "Manufacturer",
+  },
+  {
+    key: "purpose",
+    label: "Purpose",
+  },
+];
 function MedicineTable({ medicines }) {
   if (medicines.length === 0) {
     return <p>No medicines found.</p>;
@@ -8,10 +26,9 @@ function MedicineTable({ medicines }) {
       <table>
         <thead>
           <tr>
-            <th>brandName</th>
-            <th>genericName</th>
-            <th>manufacturer</th>
-            <th>purpose</th>
+            {columns.map((item, key) => (
+              <th key={item.key}>{item.label}</th>
+            ))}
           </tr>
         </thead>
         <tbody>
